@@ -131,6 +131,7 @@ li {
 .paddingBlock {
 	padding-left: 100px;
 }
+
 .paddingBlock2 {
 	padding-top: 10px;
 }
@@ -143,7 +144,7 @@ li {
 }
 .marginBlock2 {
 	margin-right: 100px;
-	margin-bottom: 50px;
+	margin-bottom: 20px;
 }
 .marginBlock3 {
 	margin-left: 100px;
@@ -164,6 +165,13 @@ li {
 }
 .textSize2 {
 	font-size: 20px;
+}
+.textSize3 {
+	font-size: 35px;
+}
+.locationButton2 {
+	position: relative;
+	top: -30px;
 }
 .locationText {
 	margin-top: 10px;
