@@ -65,14 +65,14 @@ DATABASES = {
          'HOST': 'localhost',
          'PORT': '5432',
      }
-#    'default': {
-#        'ENGINE':'django.db.backends.sqlite3',
-#        'NAME': 'mydb.sqlite',
-#        'USER': '',
-#        'PASSWORD': '',
-#        'HOST': '',
-#        'PORT': '',
-#    }
+   # 'default': {
+   #     'ENGINE':'django.db.backends.sqlite3',
+   #     'NAME': 'mydb.sqlite',
+   #     'USER': '',
+   #     'PASSWORD': '',
+   #     'HOST': '',
+   #     'PORT': '',
+   # }
 }
 
 # Internationalization

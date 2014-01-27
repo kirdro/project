@@ -23,9 +23,9 @@ li {
 .labelPosition {
 	text-align: right;
 }
-.labelPosition1 {
+/*.labelPosition1 {
 	text-align: left;
-}
+}*/
 .text1 {
 	text-align: center;
 	border: 0px;
@@ -42,10 +42,16 @@ li {
 }
 .inputPosotion {
 	background: #dbdbdb;
-}
-.inputPosotion {
 	position: relative;
 	right: 150px;
+}
+.inputPosotion1 {
+	position: relative;
+	right: 92px;
+}
+.inputPosotion2 {
+	position: relative;
+	right: 90px;
 }
 .fon2 {
 	margin-left: 180px;
@@ -225,6 +231,9 @@ h1, li, h4, h3, p, button, label {
 }
 .buttonSize4 {
 	width: 250px;
+}
+.elementPosition {
+	text-align: center;
 }
 .span11 {
 	background: #ffd800;
