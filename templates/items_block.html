@@ -32,23 +32,10 @@
                       <!-- Модал фото -->
                     <div class="modal hide fade modalSize modalColor blockSize5" id="myModal11" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         
-                        <div class="modal-body modalColor">
+                        <div class="modal-body modalColor" method="POST" action="">{% csrf_token %}
                             <form class="form-horizontal">
                               <div class="blockSize4">
-                                <img src="">
-                                  <!--<div class="carousel slide" id="myCarousel">
-                            
-                                    <div class="carousel-inner ">
-                                      <div class="item active">
-                                          <img src="/static/img/prod50/zajimi/FSf40186.jpg" alt="">
-                                      </div>
-                                      <div class="item">
-                                          <img src="/static/img/prod50/zajimi/FS401861.jpg" alt="">
-                                      </div>
-                                    </div>
-                                    <a class="left carousel-control" data-slide="prev" href="#myCarousel">&lsaquo;</a>
-                                    <a class="right carousel-control" data-slide="next" href="#myCarousel">&rsaquo;</a>
-                                </div>-->
+                                <img src="media/{{ item.image }}">
                               </div>
                             
                             </form>
@@ -75,21 +62,23 @@
                     <div class="modal hide fade modalSize modalColor" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                         <div class="modal-header">
                             <button type="button" class="close textColor" data-backdrop="true" data-dismiss="modal" aria-hidden="true">X</button>
-                            <h3 class="textColor2" id="myModalLabel">Зажимы для сосков <br/> Abjustable Nipple Clamps</h3>
+                            <h3 class="textColor2" id="myModalLabel">{{ item.titleru }}<br>{{ item.titleen }}</h3>
                         </div>
                         <div class="modal-body modalColor">
-                            <form class="form-horizontal">
+                            <form class="form-horizontal" method="POST" action="">{% csrf_token %}
+                              <input type="hidden" name="formtype" value="callme">
+                              <input type="hidden" name="itemid" value={{ item.id }}>
                               <div class="elementPosition">
                                 <div class="control-group">
                                     <label class="control-label textColor2" for="inputEmail"></label>
                                     <div class="controls">
-                                      <input type="email" class="inputPosotion2" id="inputEmail" placeholder="Email">
+                                      <input type="email" class="inputPosotion2" name="email" id="inputEmail" placeholder="Email">
                                   </div>
                                 </div>
                                   <div class="control-group">
                                     <label class="control-label textColor2"></label>
                                     <div class="controls">
-                                        <input type="text" class="inputPosotion2" id="name" placeholder="Телефон">
+                                        <input type="text" class="inputPosotion2" name="phone" id="name" placeholder="Телефон">
                                     </div>
                                   </div>
                               </div>
