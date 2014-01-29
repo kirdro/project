@@ -1,8 +1,9 @@
 # Create your views here.
 from datetime import datetime
 
+from django.core.context_processors import csrf
 from django.http import HttpResponse
-from django.template.response import TemplateResponse
+from django.shortcuts import render_to_response
 
 import models
 
@@ -39,4 +40,7 @@ def general_view(request):
 				newobject.save()			
 
 	items = models.Item.objects.all()
-	return TemplateResponse(request, 'items_block.html', {'items': items})
+
+	c 	= {'items': items}
+	c.update(csrf(request))
+	return render_to_response('items_block.html', c)
