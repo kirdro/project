@@ -30,7 +30,7 @@
                       
                       <!-- Модальный комплекс -->
                       <!-- Модал фото -->
-                    <div class="modal hide fade modalSize modalColor blockSize5" id="myModel__{{ item.id }}" tabindex="-1" role="img" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal hide fade modalColor blockSize5" id="myModel__{{ item.id }}" tabindex="-1" role="img" aria-labelledby="myModalLabel" aria-hidden="true">
         
                         <div class="blockSize9 modal-body modalColor" method="POST" action="">{% csrf_token %}
                             <form class="form-horizontal">
@@ -61,7 +61,7 @@
 
 
                       <!-- Тело Модал -->
-                    <div class="modal hide fade modalSize modalColor" id="myModal1{{ item.id }}" tabindex="-1" role="form" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal hide fade modalColor" id="myModal1{{ item.id }}" tabindex="-1" role="form" aria-labelledby="myModalLabel" aria-hidden="true">
                         <div class="modal-header">
                             <button type="button" class="close textColor" data-backdrop="true" data-dismiss="modal" aria-hidden="true">X</button>
                             <h3 class="textColor2" id="myModalLabel">{{ item.titleru }}<br>{{ item.titleen }}</h3>

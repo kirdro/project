@@ -63,10 +63,10 @@ li {
 .locationBlock {
 	right: 100px;
 }
-.modalSize {
-	/**width: 500px;**/
+/*.modalSize {
+	width: 500px;
 	height: 100px;
-}
+}*/
 .buttonGradient {
 	background: linear-gradient(to top, #1c3147, #2c4f73);
 	/**border: 3px;**/
