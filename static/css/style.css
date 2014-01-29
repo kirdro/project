@@ -116,9 +116,9 @@ li {
 .blockSize3 {
 	height: 500px;
 }
-.blockSize4 {
+/*.blockSize4 {
 	width: 300px;
-}
+}*/
 .blockSize5 {
 	width: 350px;
 }
@@ -128,6 +128,9 @@ li {
 /**.blockSize7 {
 	height: 1200px;
 }**/
+.blockSize8 {
+	max-height: 300px;
+}
 .paddingBlock {
 	padding-left: 100px;
 }
@@ -152,6 +155,9 @@ li {
 .textColor {
 	color: #ffffff;
 	/**font-size: 20px;**/
+}
+.fontSize {
+	font-size: 15px;
 }
 .textColor1 {
 	color: #c0c0c0;

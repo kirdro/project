@@ -18,7 +18,7 @@
                   </div>
                   <div class="footer colorFooter blockSize6">
                     <div class="textPosition1 blockSize2 floatBlock1">
-                      Цена: {{ item.price }}
+                      <p class="fontSize">Цена: {{ item.price }}</p>
                     </div>
                     <div class="blockSize2 heightBlock floatBlock">
                         <button class="buttonSize1 buttonSize buttonGradient1 textColor buttonSize3" data-toggle="modal" data-backdrop="true" data-target="#myModal1{{ item.id }}" type="button">Заказать</button>
@@ -32,10 +32,10 @@
                       <!-- Модал фото -->
                     <div class="modal hide fade modalSize modalColor blockSize5" id="myModel__{{ item.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         
-                        <div class="modal-body modalColor" method="POST" action="">{% csrf_token %}
+                        <div class=" modal-body modalColor" method="POST" action="">{% csrf_token %}
                             <form class="form-horizontal">
-                              <div class="blockSize4">
-                                <img src="media/{{ item.image }}">
+                              <div class="blockSize4 lockSize8">
+                                <img class="lockSize8" src="media/{{ item.image }}">
                               </div>
                             
                             </form>
@@ -43,6 +43,8 @@
                         <div class="modal-footer modalColor">
                             <div class="locationButton">
                               <button type="submit" data-backdrop="true" data-toggle="modal" data-dismiss="modal" data-target="#myModal1{{ item.id }}" class="buttonSize buttonSize2 buttonGradient textColor">Заказать</button>
+                              <br>
+                              <button class="" data-backdrop="true" data-dismiss="modal" aria-hidden="true">Закрыть</button>
                               <br/>
                             </div>
                         </div>
