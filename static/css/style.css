@@ -116,9 +116,10 @@ li {
 .blockSize3 {
 	height: 500px;
 }
-/*.blockSize4 {
-	width: 300px;
-}*/
+.blockSize4 {
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
 .blockSize5 {
 	width: 350px;
 }
@@ -129,7 +130,14 @@ li {
 	height: 1200px;
 }**/
 .blockSize8 {
-	max-height: 300px;
+	max-height: 450px;
+}
+.blockSize9 {
+	min-height: 470px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
 }
 .paddingBlock {
 	padding-left: 100px;
