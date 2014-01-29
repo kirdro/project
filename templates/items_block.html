@@ -13,8 +13,8 @@
                     <p class="textColor">{{ item.titleru }}<br>{{ item.titleen }}</p>
                   </div>
                   <div class="content blockSize3">
-                    <!-- <a href="#myModel__" data-toggle="modal"><img src="/static/img/prod50/zajimi/FS40186.jpg"></a> -->
-                    <a href="#myModel__{{ item.id }}" data-toggle="modal"><img src="media/{{ item.image }}"></a>
+                    <!-- <a href="#myModal__" data-toggle="modal"><img src="/static/img/prod50/zajimi/FS40186.jpg"></a> -->
+                    <a href="#myModal__{{ item.id }}" data-toggle="modal"><img src="media/{{ item.image }}"></a>
                   </div>
                   <div class="footer colorFooter blockSize6">
                     <div class="textPosition1 blockSize2 floatBlock1">
@@ -30,7 +30,7 @@
                       
                       <!-- Модальный комплекс -->
                       <!-- Модал фото -->
-                    <div class="modal hide fade modalColor blockSize5" id="myModel__{{ item.id }}" tabindex="-1" role="img" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal hide fade modalColor blockSize5" id="myModal__{{ item.id }}" tabindex="-1" role="img" aria-labelledby="myModalLabel" aria-hidden="true">
         
                         <div class="blockSize9 modal-body modalColor" method="POST" action="">{% csrf_token %}
                             <form class="form-horizontal">
