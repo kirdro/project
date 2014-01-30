@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
     <link href='http://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
     <link href="/static/css/bootstrap.css" rel="stylesheet" media="screen">
     <link rel="stylesheet" href="/static/css/font.awesome.min.css">
@@ -12,6 +14,21 @@
     <!--<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">--> 
   </head>
   <body id="body">
+
+
+  <div id="myModal1" class="modal hide fade" data-show="false" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+    
+    <div class="modal-body modalColor">
+      <h4 class="textColor">Благодарим за заявку, мы свяжемся с вами в ближайщее время!</h4>
+      
+    </div>
+    <div class="modal-footer modalColor locationButton">
+      <button class=" buttonSize buttonSize2 buttonGradient textColor " data-dismiss="modal">ОК</button>
+    </div>
+  </div>
+  
+
+  
 
 
 
@@ -41,17 +58,19 @@
 
 
 
+
+
           <!-- Button to trigger modal -->
           <br/>
           <br/>
-          <button class="locationButton2 buttonSize buttonSize4 buttonGradient textColor" data-toggle="modal" data-backdrop="true" data-target="#myModal" type="button">Заказать обратный звонок</button>
+          <button class="locationButton2 buttonSize buttonSize4 buttonGradient textColor" data-toggle="modal" data-target="#myModal" type="button">Заказать обратный звонок</button>
           
  
             <!-- Modal -->
           <div class="modal hide fade modalSize modalColor" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-header modalColor">
-              <button type="button" class="close textColor" data-backdrop="true" data-dismiss="modal" aria-hidden="true">X</button>
-              <button type="button" class="close" data-backdrop="true" data-dismiss="modal" aria-hidden="true"><i class="icon-search icon-white"> </i></button>
+              <button type="button" class="close textColor" data-dismiss="modal" aria-hidden="true">X</button>
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="icon-search icon-white"> </i></button>
               <h3 class="textColor2" id="myModalLabel">Заказать обратный звонок</h3>
             </div>
             <div class="modal-body modalColor">
@@ -134,7 +153,7 @@
               <div>
                 <img src="/static/img/infografika.png">
               </div>
-              <button  class="buttonSize buttonGradient textColor buttonPosition" data-toggle="modal" data-backdrop="true" data-target="#myModal" type="button">&nbsp;&nbsp;Приобретите эксклюзивную секс игрушку!&nbsp;&nbsp;</button>
+              <button  class="buttonSize buttonGradient textColor buttonPosition" data-toggle="modal" data-target="#myModal" type="button">&nbsp;&nbsp;Приобретите эксклюзивную секс игрушку!&nbsp;&nbsp;</button>
 
             </div>
 
@@ -240,12 +259,15 @@
           <!-- Button to trigger modal -->
           <br/>
           <br/>
-          <button class="locationButton2 buttonSize buttonSize4 buttonGradient textColor" data-toggle="modal" data-backdrop="true" data-target="#myModal" type="button">&nbsp;&nbsp;&nbsp;&nbsp;Заказать обратный звонок&nbsp;&nbsp;&nbsp;&nbsp;</button>
+          <button class="locationButton2 buttonSize buttonSize4 buttonGradient textColor" data-toggle="modal" data-target="#myModal" type="button">&nbsp;&nbsp;&nbsp;&nbsp;Заказать обратный звонок&nbsp;&nbsp;&nbsp;&nbsp;</button>
         </div>
       </div>
     </div>
     <script src="/static/js/jquery-latest.js"></script>
     <script src="/static/js/bootstrap.min.js"></script>
+    <script type="text/javascript">$(function(){
+   $('#myModal1').modal('show');
+    });</script>
     <script type="text/javascript">
   WebFontConfig = {
     google: { families: [ 'PT+Serif::latin' ] }
