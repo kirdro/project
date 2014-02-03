@@ -9,6 +9,7 @@ import models
 
 
 def general_view(request):
+	c = {}
 
 	if request.method=='POST':
 		data = request.POST
@@ -31,16 +32,18 @@ def general_view(request):
 														   item=item,
 														   date=datetime.now())
 				newcallme.save()
+				c['show_modal_response'] = True
 
 		elif (formtype=='action'):
 			if (email!='')&(phone!=''):
 				newobject 	= models.GetAction.objects.create(email=email,
 															  phone=phone,
 															  date=datetime.now())
-				newobject.save()			
+				newobject.save()
+				c['show_modal_response'] = True
 
 	items = models.Item.objects.all()
 
-	c 	= {'items': items}
+	c['items'] = items
 	c.update(csrf(request))
 	return render_to_response('items_block.html', c)
