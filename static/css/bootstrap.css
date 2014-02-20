@@ -222,7 +222,6 @@ textarea {
 }
 
 body {
-  height: 100%;
   margin: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -282,15 +281,15 @@ a:focus {
 
 [class*="span"] {
   float: left;
-  min-height: 1px;
-  margin-left: 20px;
+  /*min-height: 1px;
+  margin-left: 20px;*/
 }
 
 .container,
 .navbar-static-top .container,
 .navbar-fixed-top .container,
 .navbar-fixed-bottom .container {
-  width: 940px;
+  width: 1100px;
 }
 
 .span12 {
@@ -5248,9 +5247,10 @@ input[type="submit"].btn.btn-mini {
 
 .modal-body {
   position: relative;
-  max-height: 400px;
+  max-height: 500px;
   padding: 15px;
   overflow-y: auto;
+  text-align: center;
 }
 
 .modal-form {

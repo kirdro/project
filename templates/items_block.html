@@ -7,99 +7,63 @@
 
 {% for item in items %}
 
- <!-- Контеинер для продукции -->
-                 <div class="blockSize1">
-                  <div class="borderHeader header colorHeader">
-                    <p class="textColor">{{ item.titleru }}<br>{{ item.titleen }}</p>
-                  </div>
-                  <div class="content blockSize3">
-                    <!-- <a href="#myModal__" data-toggle="modal"><img src="/static/img/prod50/zajimi/FS40186.jpg"></a> -->
-                    <a href="#myModal__{{ item.id }}" data-toggle="modal"><img src="media/{{ item.image }}"></a>
-                  </div>
-                  <div class="footer colorFooter blockSize6">
-                    <div class="textPosition1 blockSize2 floatBlock1">
-                      <p class="fontSize">Цена: {{ item.price }}</p>
+				<div class="span4 block-mini-feature">
+                    <div class="header-block-mini">
+                        <p class="text-header-block">{{ item.titleru }}<br />{{ item.titleen }}</p>
                     </div>
-                    <div class="blockSize2 heightBlock floatBlock">
-                        <button class="buttonSize1 buttonSize buttonGradient1 textColor buttonSize3" data-toggle="modal" data-backdrop="true" data-target="#myModal1{{ item.id }}" type="button">Заказать</button>
-                    </div>
-
-                    <!--сайчас тут яяяя -->
-                    
-
-                      
-                      <!-- Модальный комплекс -->
-                      <!-- Модал фото -->
-                    <div class="modal hide fade modalColor blockSize5" id="myModal__{{ item.id }}" tabindex="-1" role="img" aria-labelledby="myModalLabel" aria-hidden="true">
-        
-                        <div class="blockSize9 modal-body modalColor" method="POST" action="">{% csrf_token %}
-                            <form class="form-horizontal">
-                              <div class="blockSize4">
-                                <img class="blockSize8" src="media/{{ item.image }}">
-                              </div>
-                            
-                            </form>
-                        </div>
-                        <div class="modal-footer modalColor">
-                            <div class="locationButton">
-                              <button type="submit" data-backdrop="true" data-toggle="modal" data-dismiss="modal" data-target="#myModal1{{ item.id }}" class="buttonSize buttonSize2 buttonGradient textColor">Заказать</button>
-                              <br>
-                              <button class="" data-backdrop="true" data-dismiss="modal" aria-hidden="true">Закрыть</button>
-                              <br/>
-                            </div>
+                    <div class="body-block-mini">
+                        <div>
+                            <a href="#myModal1__{{ item.id }}" data-toggle="modal">
+                                <img src="media/{{ item.image }}" alt="{{ item.titleru }}">
+                            </a>
                         </div>
                     </div>
-
-
-
-
-
-                      <!-- Кнопка Модал -->
-                      
-                                              
-
-
-
-                      <!-- Тело Модал -->
-                    <div class="modal hide fade modalColor" id="myModal1{{ item.id }}" tabindex="-1" role="form" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="footer-block-mini">
+                        <div class="footer-mini">
+                            <p class="text-margin">Цена: {{ item.price }}</p>
+                        </div>
+                        <button class="font-family button-feature" data-toggle="modal" data-target="#myModal2{{ item.id }}" type="button">Заказать</button>
+                    </div>
+                    <!-- modal-complex -->
+                    <!-- modal-imeg -->
+                    <div class="modal hide fade" id="myModal1__{{ item.id }}" role="img">
                         <div class="modal-header">
-                            <button type="button" class="close textColor" data-backdrop="true" data-dismiss="modal" aria-hidden="true">X</button>
-                            <h3 class="textColor2" id="myModalLabel">{{ item.titleru }}<br>{{ item.titleen }}</h3>
+                            <button class="close" data-dismiss="modal">×</button>
+                            <h3>{{ item.titleru }}</h3>
                         </div>
-                        <div class="modal-body modalColor">
-                            <form class="form-horizontal" method="POST" action="">{% csrf_token %}
-                              <input type="hidden" name="formtype" value="callme">
-                              <input type="hidden" name="itemid" value={{ item.id }}>
-                              <div class="elementPosition">
-                                <div class="control-group">
-                                    <label class="control-label textColor2" for="inputEmail"></label>
-                                    <div class="controls">
-                                      <input type="email" class="inputPosotion2" name="email" id="inputEmail" placeholder="Email" required>
-                                  </div>
-                                </div>
-                                  <div class="control-group">
-                                    <label class="control-label textColor2"></label>
-                                    <div class="controls">
-                                        <input type="tel" pattern="[0-9]{5,12}" class="inputPosotion2" name="phone" id="name" placeholder="Телефон" required>
+                        <div class="modal-body" method="POST" action="">{% csrf_token %}
+                            <img src="media/{{ item.image }}" alt="{{ item.titleru }}">
+                        </div>
+                        <div class="modal-footer">
+                            <button class="buttonFeature2" data-toggle="modal" data-target="#myModal2{{ item.id }}" type="button" data-dismiss="modal">Заказать</button>
+                            <button data-dismiss="modal" class="close-button">Закрыть</button>
+                        </div>
+                    </div>
+                    <!-- modal-form -->
+                    <div class="modal fade hide" id="myModal2{{ item.id }}">
+                        <div class="modal-header">
+                            <button class="close" data-dismiss="modal">×</button>
+                            <h3>{{ item.titleru }}<br>{{ item.titleen }}</h3>
+                            <p>Введите телефон в формате +7xxxxxxxxxx, где вместо x должна быть цифра:</p>
+                        </div>
+                        <div class="modal-body">
+                            <form class="inputFeature" method="POST" action="">{% csrf_token %}
+                            	<input type="hidden" name="formtype" value="callme">
+                              	<input type="hidden" name="itemid" value={{ item.id }}>
+                                <fieldset>
+                                    <div class="control-group success">
+                                        <div class="controls">
+                                            <input type="email" name="email" class="input-xlarge" id="inputEmail" placeholder="Email" required>
+                                            <input type="tel" class="input-xlarge" name="phone"
+                                            pattern="\+7[0-9]{5,14}" min="8" max="12" id="tel" placeholder="Телефон" required>
+                                        </div>
                                     </div>
-                                  </div>
-                              </div>
-                          
-                            
-                              <div class="control-group">
-                                <div class="locationButton">
-                                  <button type="submit" data-backdrop="true" class="buttonSize buttonSize2 buttonGradient textColor">Заказать</button>
-                                </div>
-                             
-                              </div>
+                                </fieldset>
+                                <button class="buttonFeature2" type="submit">Заказать</button>
                             </form>
                         </div>
-                        
                     </div>
-                    <!-- Конец Модального комплекса -->
-
                 </div>
-            </div>
 {% endfor %}
 
 
