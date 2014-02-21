@@ -1,10 +1,18 @@
 #body {
 	background: #1f1f1f;
 }
-/*@font-face {
-	font-family: Bookman Old Style;
-	src: url(BOOKOS_0.TTF);
-}*/
+@font-face {
+	font-family: Vivaldi;
+	src: url(Mon-amour.ttf);
+}
+@font-face {
+	font-family: Calibri;
+	src: url(Calibri234.ttf);
+}
+@font-face {
+	font-family: FiraSans;
+	src: url(Fira-sans233.ttf);
+}
 h1,
 h2,
 h3 {
@@ -54,13 +62,13 @@ h4 small {
   font-size: 14px;
 }
 .font-family {
-	font-family: Bookman Old Style;
+	font-family: Vivaldi;
 }
 .font-family1 {
 	font-family: Calibri;
 }
 .font-family2 {
-	font-family: verdana;
+	font-family: FiraSans;
 }
 .font-size {
 	font-size: 20px;
@@ -404,6 +412,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#101010', end
 }
 .text-header-block {
 	margin-top: 5px;
+	font-size: 16px;
 }
 .modal-footer {
 	background: #1c1c24;
@@ -461,4 +470,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#101010', end
 }
 .textColor {
 	color: #ffffff;
+}
+.metrika-position {
+	float: right;
+	margin-right: 200px;
+	margin-top: 140px;
 }

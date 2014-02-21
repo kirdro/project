@@ -9,7 +9,7 @@
 
 				<div class="span4 block-mini-feature">
                     <div class="header-block-mini">
-                        <p class="text-header-block">{{ item.titleru }}<br />{{ item.titleen }}</p>
+                        <p class="text-header-block font-family1">{{ item.titleru }}<br />{{ item.titleen }}</p>
                     </div>
                     <div class="body-block-mini">
                         <div>
@@ -22,14 +22,14 @@
                         <div class="footer-mini">
                             <p class="text-margin">Цена: {{ item.price }}</p>
                         </div>
-                        <button class="font-family button-feature" data-toggle="modal" data-target="#myModal2{{ item.id }}" type="button">Заказать</button>
+                        <button class="font-family1 button-feature" data-toggle="modal" data-target="#myModal2{{ item.id }}" type="button">Заказать</button>
                     </div>
                     <!-- modal-complex -->
                     <!-- modal-imeg -->
                     <div class="modal hide fade" id="myModal1__{{ item.id }}" role="img">
                         <div class="modal-header">
                             <button class="close" data-dismiss="modal">×</button>
-                            <h3>{{ item.titleru }}</h3>
+                            <h3 class="font-family2">{{ item.titleru }}</h3>
                         </div>
                         <div class="modal-body" method="POST" action="">{% csrf_token %}
                             <img src="media/{{ item.image }}" alt="{{ item.titleru }}">
@@ -43,7 +43,7 @@
                     <div class="modal fade hide" id="myModal2{{ item.id }}">
                         <div class="modal-header">
                             <button class="close" data-dismiss="modal">×</button>
-                            <h3>{{ item.titleru }}<br>{{ item.titleen }}</h3>
+                            <h3 class="font-family">{{ item.titleru }}<br>{{ item.titleen }}</h3>
                             <p>Введите телефон в формате +7xxxxxxxxxx, где вместо x должна быть цифра:</p>
                         </div>
                         <div class="modal-body">
