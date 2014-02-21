@@ -5,6 +5,52 @@
 	font-family: Bookman Old Style;
 	src: url(BOOKOS_0.TTF);
 }*/
+h1,
+h2,
+h3 {
+  line-height: 40px;
+}
+
+h1 {
+  font-size: 38.5px;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 31.5px;
+}
+
+h3 {
+  font-size: 24.5px;
+}
+
+h4 {
+  font-size: 17.5px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  font-size: 11.9px;
+}
+
+h1 small {
+  font-size: 24.5px;
+}
+
+h2 small {
+  font-size: 17.5px;
+}
+
+h3 small {
+  font-size: 14px;
+}
+
+h4 small {
+  font-size: 14px;
+}
 .font-family {
 	font-family: Bookman Old Style;
 }
@@ -122,8 +168,13 @@ article, .textFeature2 {
 	width: 250px;
 	margin-top: 10px;
 	background: linear-gradient(to top, #1c3147, #2c4f73);
-	border-width: 1px;
-	border-color: #2c4f73;
+	background: -moz-linear-gradient(to top, #1c3147, #2c4f73);
+	background: -webkit-linear-gradient(to top, #1c3147, #2c4f73);
+	background: -o-linear-gradient(to top, #1c3147, #2c4f73);
+	background: -ms-linear-gradient(to top, #1c3147, #2c4f73);
+	/*border-width: 1px;
+	border-color: #2c4f73*/;
+	border: 1px solid #2c4f73; 
 	color: #ffffff;
 }
 .buttonFeature:hover, .buttonFeature2:hover, .buttonFeature3:hover, .buttonFeature4:hover, .button-feature:hover, .button-feature1:hover {
@@ -144,8 +195,7 @@ h2, h4 {
 	width: 200px;
 	margin-top: 10px;
 	background: linear-gradient(to top, #1c3147, #2c4f73);
-	border-width: 1px;
-	border-color: #2c4f73;
+	border: 1px solid #2c4f73;
 	color: #ffffff;
 }
 .buttonFeature3 {
@@ -153,13 +203,13 @@ h2, h4 {
 	width: 150px;
 	margin-top: 10px;
 	background: linear-gradient(to top, #1c3147, #2c4f73);
-	border-width: 1px;
-	border-color: #2c4f73;
+	border: 1px solid #2c4f73;
 	color: #ffffff;
 }
 .blockFeature3 {
 	margin-left: 10px;
-	margin-right: -10px;				
+	margin-right: -10px;
+	height: 132px;				
 }
 .blockFeature4 {
 	background: #101010; /* Old browsers */
@@ -257,8 +307,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#101010', end
 	width: 320px;
 	margin-top: 10px;
 	background: linear-gradient(to top, #1c3147, #2c4f73);
-	border-width: 1px;
-	border-color: #2c4f73;
+	border: 1px solid #2c4f73;
 	color: #ffffff;
 	margin-left: 390px;
 	margin-right: 390px;
@@ -345,8 +394,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#101010', end
 }
 .button-feature1 {
 	background: linear-gradient(to top, #1c3147, #2c4f73);
-	border-width: 1px;
-	border-color: #2c4f73;
+	border: 1px solid #2c4f73;
 	height: 40px;
 	font-size: 15px;
 	width: 200px;
