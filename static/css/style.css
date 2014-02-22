@@ -379,7 +379,25 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#101010', end
 	transition: opacity .4s;
 }
 .body-block-mini:hover::after {
-	opacity: 0;*/
+	opacity: 0;
+}*/
+.radial-gradient {
+	content: '';
+	width: 220px;
+	height: 250px;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: -webkit-radial-gradient(transparent, rgba(0,0,0,.7));
+	background: -moz-radial-gradient(transparent, rgba(0,0,0,.7));
+	background: -o-radial-gradient(transparent, rgba(0,0,0,.7));
+	background: -ms-radial-gradient(transparent, rgba(0,0,0,.7));
+	background: radial-gradient(transparent, rgba(0,0,0,.8));
+	transition: opacity .4s;
+}
+.radial-gradient:hover {
+	opacity: 0;
 }
 .footer-block-mini{
 	width: 220px;
