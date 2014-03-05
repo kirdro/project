@@ -328,6 +328,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#101010', end
 	text-align: left;
 	text-indent: 20px;
 	text-shadow: 2px 2px 4px black;
+	line-height: 1.4;
 }
 .block-font-feature {
 	padding-left: 50px;
@@ -397,7 +398,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#101010', end
 	transition: opacity .4s;
 }
 .radial-gradient:hover {
-	opacity: 0;
+	opacity: ;city: 0;
 }
 .footer-block-mini{
 	width: 220px;
