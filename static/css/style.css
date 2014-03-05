@@ -398,7 +398,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#101010', end
 	transition: opacity .4s;
 }
 .radial-gradient:hover {
-	opacity: ;city: 0;
+	opacity: 0;
 }
 .footer-block-mini{
 	width: 220px;
